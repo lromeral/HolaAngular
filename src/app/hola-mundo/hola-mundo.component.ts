@@ -22,5 +22,15 @@ export class HolaMundoComponent implements OnInit {
 
     this.imagenSrc='';
   }
+  delImagen(indice:number){
+    this.arrayImagenes.splice(indice,1);
+  }
 
+  getIndiceImagen (imagen:string){
+    let indice: Number;
+    indice = this.arrayImagenes.indexOf(imagen);
+    console.log("Indice " + indice);
+    return indice;
+
+  }
 }
